@@ -19,21 +19,20 @@ public class liveChartController {
 
     @Autowired
     GridService gridService;
-
     @Autowired
     ClusterService clusterService;
-
     @Autowired
     HostService hostService;
-
     @Autowired
     MetricService metricService;
 
     private String mainFrag = "templates/navigation";
     private String contentPage = "contentPage";
     private String liveChartPage = "liveChartPage";
-    //private int interval = 100;
-
+    
+    /*
+     * 实时监控信息 网格详情
+     */
     @RequestMapping(value = "/grids/{gridName}")
     public String findGrid(@PathVariable String gridName,ModelMap modelMap){
         List<Cluster> clusters = clusterService.selectByGrid(gridName);
@@ -43,6 +42,9 @@ public class liveChartController {
         return mainFrag;
     }
 
+    /*
+     * 实时监控信息 集群详情
+     */
     @RequestMapping(value = "/clusters/{clusterName}")
     public String findCluster(@PathVariable String clusterName,ModelMap modelMap){
         List<Host> hosts = hostService.selectByCluster(clusterName);
@@ -52,6 +54,9 @@ public class liveChartController {
         return mainFrag;
     }
 
+    /*
+     * 实时监控信息 主机详情
+     */
     @RequestMapping(value = "/hosts/{hostName}")
     public String findHost(@PathVariable String hostName,ModelMap modelMap){
         List<Metric> metrics = metricService.selectByHost(hostName);

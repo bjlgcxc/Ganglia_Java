@@ -5,8 +5,5 @@
             <h1 class="page-header">通知消息</h1>
         </div>
         <!-- /.col-lg-12 -->
-
     </div>
-
-
 </div>

@@ -13,15 +13,15 @@
             <div class="panel panel-info">
                 <!-- /.panel-heading -->
                 <div class="panel-heading">
-                    用户操作
+                                        用户操作
                 </div>
-                <jsp:include page ="${pageContext.request.contextPath}profile_partials/${userProfilePage}" flush="true"/>
+                <jsp:include page ="/WEB-INF/jsp/partials/profile_partials/${userProfilePage}" flush="true"/>
 
                 <div class="panel-footer">
-                    <a href="${pageContext.request.contextPath}/userProfile/selectUser.html" class="btn btn-outline btn-info">查看现有用户</a>
-                    <a href="${pageContext.request.contextPath}/userProfile/insertUser.html" class="btn btn-outline btn-success">添加新用户</a>
-                    <a href="${pageContext.request.contextPath}/userProfile/updateUser.html" class="btn btn-outline btn-warning">修改用户密码</a>
-                    <a href="${pageContext.request.contextPath}/userProfile/deleteUser.html" class="btn btn-outline btn-danger">删除用户</a>
+                    <a href="userProfile/selectUser.html" class="btn btn-outline btn-info">查看现有用户</a>
+                    <a href="userProfile/insertUser.html" class="btn btn-outline btn-success">添加新用户</a>
+                    <a href="userProfile/updateUser.html" class="btn btn-outline btn-warning">修改用户密码</a>
+                    <a href="userProfile/deleteUser.html" class="btn btn-outline btn-danger">删除用户</a>
                 </div>
             </div>
             <!-- /.panel -->

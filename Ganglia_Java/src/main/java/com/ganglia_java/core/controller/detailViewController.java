@@ -32,7 +32,18 @@ public class detailViewController {
     private String mainFrag = "templates/navigation";
     private String contentPage = "contentPage";
     private String detailPage = "detailPage";
-
+    
+    //获取集群详细信息
+    @RequestMapping(value = "/detailView")
+    public String physicalView(ModelMap modelMap){
+        List<Grid> grids = gridService.selectAll();
+        modelMap.addAttribute(contentPage,"detailView.jsp");
+        modelMap.addAttribute("detailPage","defaultView.jsp");
+        modelMap.addAttribute("allGrids",grids);
+        return mainFrag;
+    }
+    
+    //获取网格详细信息
     @RequestMapping(value = "/gridsDetail/{gridName}")
     public String findGrid(@PathVariable String gridName, ModelMap modelMap){
         List<Cluster> clusters = clusterService.selectByGrid(gridName);
@@ -57,15 +68,6 @@ public class detailViewController {
         modelMap.addAttribute(contentPage,"detailView.jsp");
         modelMap.addAttribute(detailPage,"hostView.jsp");
         modelMap.addAttribute("allMetrics",metrics);
-        return mainFrag;
-    }
-    
-    @RequestMapping(value = "/detailView")
-    public String physicalView(ModelMap modelMap){
-        List<Grid> grids = gridService.selectAll();
-        modelMap.addAttribute(contentPage,"detailView.jsp");
-        modelMap.addAttribute("detailPage","defaultView.jsp");
-        modelMap.addAttribute("allGrids",grids);
         return mainFrag;
     }
     

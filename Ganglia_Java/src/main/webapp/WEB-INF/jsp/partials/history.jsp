@@ -6,13 +6,13 @@
 <script src="static/bower_components/bootstrap/js/transition.js"></script>
 <script src="static/bower_components/bootstrap/js/collapse.js"></script>
 <script src="static/bower_components/bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js"></script>
-<script src="static//bower_components/flot/excanvas.min.js"></script>
-<script src="static//bower_components/flot/jquery.flot.js"></script>
-<script src="static//bower_components/flot/jquery.flot.pie.js"></script>
-<script src="static//bower_components/flot/jquery.flot.resize.js"></script>
-<script src="static//bower_components/flot/jquery.flot.time.js"></script>
-<script src="static//bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
-<link rel="stylesheet" href="../static/bower_components/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+<script src="static/bower_components/flot/excanvas.min.js"></script>
+<script src="static/bower_components/flot/jquery.flot.js"></script>
+<script src="static/bower_components/flot/jquery.flot.pie.js"></script>
+<script src="static/bower_components/flot/jquery.flot.resize.js"></script>
+<script src="static/bower_components/flot/jquery.flot.time.js"></script>
+<script src="static/bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+<link rel="stylesheet" href="static/bower_components/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
 
 <div id="page-wrapper">
     <div class="row">
@@ -20,14 +20,14 @@
             <h1 class="page-header">历史数据查询</h1>
         </div>
     </div>
-
+    
     <div class="row">
         <div class="col-lg-8">
             <div class="panel panel-default">
                 <c:if test="${result == false}">
                 <form:form action="history.html" modelAttribute="history" method="post">
                 	<div class="panel-heading">
-                                                选择你要查询的历史数据的时间段
+                                                选择你要查询的历史数据所在时间段
                 	</div>
                 	<div class="panel-body">
                     	<div class='col-lg-6'>

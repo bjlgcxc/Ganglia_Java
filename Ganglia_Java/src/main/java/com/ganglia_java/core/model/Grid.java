@@ -1,9 +1,5 @@
 package com.ganglia_java.core.model;
 
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import java.util.Date;
-
 public class Grid {
     private String gridName;
     private String authority;

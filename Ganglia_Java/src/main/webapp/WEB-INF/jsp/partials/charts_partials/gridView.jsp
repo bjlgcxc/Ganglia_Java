@@ -18,7 +18,7 @@
                         </div>
                     </div>
                     <!-- /.panel-body -->
-                    <a href="${pageContext.request.contextPath}/clusters/${clusters.clusterName}.html">
+                    <a href="clusters/${clusters.clusterName}.html">
                         <div class="panel-footer">
                             <span class="pull-left">查看详情</span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -122,7 +122,7 @@
                 });
 
                 // Update the random dataset at 25FPS for a smoothly-animating chart
-
+                // 定时刷新
                 setInterval(function updateRandom() {
                     series[0].data = getRandomData();
                     plot.setData(series);
@@ -138,7 +138,7 @@
         <div class="col-lg-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    无数据
+                                           无数据
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">

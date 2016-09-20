@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
@@ -12,7 +13,7 @@
         <div class="col-lg-8">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    设置
+                                         设置
                 </div>
                 <!-- /.panel-heading -->
                 <c:choose>
@@ -21,9 +22,11 @@
                         <div class="panel-body">
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs">
-                                <li class="active"><a href="#liveChart" data-toggle="tab">动态图表设置</a>
+                                <li class="active">
+                                	<a href="#liveChart" data-toggle="tab">动态图表设置</a>
                                 </li>
-                                <li><a href="#messages" data-toggle="tab">通知消息设置</a>
+                                <li>
+                                	<a href="#messages" data-toggle="tab">通知消息设置</a>
                                 </li>
                             </ul>
                             <!-- Tab panes -->
@@ -36,9 +39,9 @@
                                             <label>选择每行最多显示的图表数</label>
                                             <form:select path="line_count" class="form-control">
                                                 <form:option value="${setting.line_count}">${setting.line_count}</form:option>
-                                                <form:option value="2">2</form:option>
-                                                <form:option value="3">3</form:option>
-                                                <form:option value="4">4</form:option>
+                                                <form:option value="2">3</form:option>
+                                                <form:option value="3">4</form:option>
+                                                <form:option value="4">5</form:option>
                                                 <form:option value="6">6</form:option>
                                             </form:select>
                                         </div>
@@ -63,19 +66,20 @@
                                                     </thead>
                                                     <tbody>
                                                     <form:form method="post" >
-                                                    <c:forEach items="${metrics}" var="items">
-                                                    <tr>
-                                                        <td>${items.metricName}</td>
-                                                        <td><div class="form-group input-group">
-                                                            <input class="form-control" value="${items.warning}"/>
-                                                            <span class="input-group-addon">${items.unit}</span>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    </c:forEach>
-                                                    </tbody>
+                                                    	<c:forEach items="${metrics}" var="items">
+                                                    	<tr>
+                                                        	<td>${items.metricName}</td>
+                                                        	<td>
+                                                        		<div class="form-group input-group">
+                                                            		<input class="form-control" value="${items.warning}"/>
+                                                            		<span class="input-group-addon">${items.unit}</span>
+                                                            	</div>
+                                                        	</td>
+                                                    	</tr>
+                                                    	</c:forEach>
                                                     </form:form>
-                                                </table>
+                                                    </tbody>
+                                                </table>                                               
                                             </div>
                                             <!-- /.table-responsive -->
                                         <br>
@@ -107,9 +111,7 @@
                 </c:choose>
             </div>
             <!-- /.panel -->
-
         </div>
         <!-- /.col-lg-6 -->
     </div>
-
 </div>

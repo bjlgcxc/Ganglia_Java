@@ -20,10 +20,7 @@
     </div>
     <!-- /.row -->
 
-    <jsp:include page="./charts_partials/${liveChartPage}" flush="true"/>
+    <jsp:include page="/WEB-INF/jsp/partials/charts_partials/${liveChartPage}" flush="true"/>
 
 </div>
 <!-- /.row -->
-
-</div>
-<!-- /#page-wrapper -->

@@ -2,10 +2,11 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%--更新用户--%>
     <!-- /.panel-body -->
     <div class="panel-body">
-        <form:form modelAttribute="updateForm" name="updateForm" action="/userProfile/updateUser.html" method="post">
+        <form:form modelAttribute="updateForm" name="updateForm" action="userProfile/updateUser.html" method="post">
             <div class="form-group" >
                 <label>请选择要修改密码的用户</label>
                     <form:select path="userName" class="form-control">
@@ -23,7 +24,7 @@
                 <input id="Pwd1" name="updatePwd" type="password" class="form-control"
                        onpaste="return false" oncontextmenu="return false" oncopy="return false" oncut="return false"/>
 
-                <label>请再输入一遍新密码</label>
+                <label>请再次输入新密码</label>
                 <label class="control-label" for="Pwd2">两次输入密码必须一致</label>
                 <form:input path="newPassword" id="Pwd2" name="updatePwdConfirm" type="password"  class="form-control"
                             onpaste="return false" oncontextmenu="return false" oncopy="return false" oncut="return false"/>

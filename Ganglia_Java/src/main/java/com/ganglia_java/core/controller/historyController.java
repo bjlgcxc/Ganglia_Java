@@ -12,20 +12,27 @@ public class historyController {
 
     private String mainFrag = "templates/navigation";
     private String contentPage = "contentPage";
-
+    
+    /*
+     * 获取历史数据(未完成)
+     */
     @RequestMapping(value = "/history",method = RequestMethod.GET)
-    public String history(ModelMap modelMap){
+    public String getHistory(ModelMap modelMap){
         modelMap.addAttribute(contentPage,"history.jsp");
         modelMap.addAttribute("result",false);
         modelMap.addAttribute("history",new History());
         return mainFrag;
     }
 
+    /*
+     * 保存历史数据(未完成)
+     */
     @RequestMapping(value = "/history",method = RequestMethod.POST)
-    public String history2(@ModelAttribute(value = "history")History history, ModelMap modelMap){
+    public String saveHistory(@ModelAttribute(value = "history")History history, ModelMap modelMap){
         modelMap.addAttribute(contentPage,"history.jsp");
-        modelMap.addAttribute("msg","Selected Time Range: "+history.getBeginTime()+" "+history.getStopTime());
+        modelMap.addAttribute("msg","Selected Time Range: " + history.getBeginTime() + " " + history.getStopTime());
         modelMap.addAttribute("result",true);
         return mainFrag;
     }
+    
 }

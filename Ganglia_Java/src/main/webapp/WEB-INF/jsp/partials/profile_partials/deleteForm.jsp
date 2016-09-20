@@ -5,7 +5,7 @@
 <%--删除用户--%>
     <!-- /.panel-body -->
     <div class="panel-body">
-        <form:form modelAttribute="deleteForm" action="/userProfile/deleteUser.html" method="post">
+        <form:form modelAttribute="deleteForm" action="userProfile/deleteUser.html" method="post">
             <div class="form-group">
 
                 <label>请选择要删除的用户</label>

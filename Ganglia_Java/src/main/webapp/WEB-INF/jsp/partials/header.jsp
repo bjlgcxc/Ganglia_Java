@@ -189,12 +189,12 @@
             <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
         </a>
         <ul class="dropdown-menu dropdown-user">
-            <li><a href="${pageContext.request.contextPath}/userProfile.html"><i class="fa fa-user fa-fw"></i> 用户管理</a>
+            <li><a href="userProfile.html"><i class="fa fa-user fa-fw"></i> 用户管理</a>
             </li>
-            <li><a href="${pageContext.request.contextPath}/settings.html"><i class="fa fa-gear fa-fw"></i> 设置</a>
+            <li><a href="settings.html"><i class="fa fa-gear fa-fw"></i> 设置</a>
             </li>
             <li class="divider"></li>
-            <li><a href="${pageContext.request.contextPath}/login.html"><i class="fa fa-sign-out fa-fw"></i> 注销 </a>
+            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> 注销 </a>
             </li>
         </ul>
         <!-- /.dropdown-user -->

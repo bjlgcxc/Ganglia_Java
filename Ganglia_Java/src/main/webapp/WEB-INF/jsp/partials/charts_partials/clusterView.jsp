@@ -4,12 +4,11 @@
 
 <c:choose>
     <c:when test="${fn:length(allHosts) gt 0}">
-        <div class="row">
         <c:forEach items="${allHosts}" var="hosts">
             <div class="col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                            ${hosts.hostName}实时数据
+                         ${hosts.hostName}实时数据
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -18,7 +17,7 @@
                         </div>
                     </div>
                     <!-- /.panel-body -->
-                    <a href="${pageContext.request.contextPath}/hosts/${hosts.hostName}.html">
+                    <a href="hosts/${hosts.hostName}.html">
                         <div class="panel-footer">
                             <span class="pull-left">查看详情</span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -138,7 +137,7 @@
         <div class="col-lg-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    无数据
+                                         无数据
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">

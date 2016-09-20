@@ -1,10 +1,7 @@
 package com.ganglia_java.core.model;
 
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import java.util.Date;
-
 public class Host {
+	
     private String hostName;
     private String clusterName;
     private String hostIP;

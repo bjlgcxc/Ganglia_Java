@@ -17,6 +17,9 @@ public class IndexController {
     @Autowired
     GridService gridService;
 
+    /*
+     * 跳转到"实时监控信息"
+     */
     @RequestMapping(value = "/index")
     public String index(ModelMap modelMap){
         List<Grid> grids = gridService.selectAll();
@@ -26,6 +29,9 @@ public class IndexController {
         return mainFrag;
     }
 
+    /*
+     * 跳转到"用户管理"
+     */
     @RequestMapping(value = "/userProfile")
     public String userProfile(ModelMap modelMap){
         modelMap.addAttribute(contentPage,"userProfile.jsp");
@@ -34,9 +40,13 @@ public class IndexController {
         return mainFrag;
     }
 
+    /*
+     * 跳转到"消息提醒"
+     */
     @RequestMapping(value = "/notification")
     public String notification(ModelMap modelMap){
         modelMap.addAttribute(contentPage,"notification.jsp");
         return mainFrag;
     }
+    
 }

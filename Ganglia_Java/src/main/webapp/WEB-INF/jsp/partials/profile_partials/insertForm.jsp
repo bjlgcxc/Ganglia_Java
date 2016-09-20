@@ -5,9 +5,9 @@
 
     <!-- /.panel-body -->
     <div class="panel-body">
-        <form:form modelAttribute="insertForm" name="insertForm" action="/userProfile/insertUser.html" method="post">
+        <form:form modelAttribute="insertForm" name="insertForm" action="userProfile/insertUser.html" method="post">
             <div class="form-group">
-
+            
                 <label>请输入新用户名</label>
                 <form:input path="userName" class="form-control"/>
 
@@ -16,7 +16,7 @@
                 <input id="Pwd1" name="insertPwd" type="password" class="form-control"
                        onpaste="return false" oncontextmenu="return false" oncopy="return false" oncut="return false"/>
 
-                <label>请再输入一遍新密码</label>
+                <label>请再次输入新密码</label>
                 <label class="control-label" for="Pwd2">两次输入密码必须一致</label>
                 <form:input id="Pwd2" path="userPassword" name="insertPwdConfirm"  type="password" class="form-control"
                             onpaste="return false" oncontextmenu="return false" oncopy="return false" oncut="return false"/>
@@ -73,8 +73,10 @@
             });
             $("form").submit(function (event) {
                 if(has_error1 || has_error2) {
-                    if(event.preventDefault) event.preventDefault();
-                    else event.returnValue = false;
+                    if(event.preventDefault) 
+                    	event.preventDefault();
+                    else 
+                    	event.returnValue = false;
                 }
             });
         });

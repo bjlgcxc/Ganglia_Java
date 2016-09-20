@@ -22,6 +22,9 @@ public class LoginController {
     @Autowired
     private GridService gridService;
     
+    /*
+     * 跳转到登陆界面
+     */
     @RequestMapping(method = RequestMethod.GET)
     public String addForm(Model model){
         User user = new User();
@@ -29,6 +32,9 @@ public class LoginController {
         return "login";
     }
 
+    /*
+     * 登陆验证
+     */
     @RequestMapping(method = RequestMethod.POST)
     public String loginCheck(@ModelAttribute User user, ModelMap modelMap){
  

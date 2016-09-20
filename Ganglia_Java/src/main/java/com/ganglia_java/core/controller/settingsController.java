@@ -23,7 +23,9 @@ public class settingsController {
     private String mainFrag = "templates/navigation";
     private String contentPage = "contentPage";
     
-    
+    /*
+     * 获取系统设置
+     */
     @RequestMapping(value = "/settings",method = RequestMethod.GET)
     public String settingsGET(ModelMap modelMap){
         List<Metric> metrics = metricService.selectAll();
@@ -38,6 +40,9 @@ public class settingsController {
         return mainFrag;
     }
 
+    /*
+     * 保存系统设置
+     */
     @RequestMapping(value = "/settings",method = RequestMethod.POST)
     public String settingsPOST(@ModelAttribute(value = "setting")List<Setting> settings, ModelMap modelMap){
         modelMap.addAttribute(contentPage,"settings.jsp");

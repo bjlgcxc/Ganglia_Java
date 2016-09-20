@@ -1,14 +1,14 @@
 package com.ganglia_java.core.model;
 
-public class newUser extends User{
+public class NewUser extends User{
 
     private String newPassword;
 
-    public newUser(){}
+    public NewUser(){}
 
-    public newUser(String userName,String userPassword,String newPassword){
+    public NewUser(String userName,String userPassword,String newPassword){
         super(userName,userPassword);
-        newPassword = newPassword;
+        this.newPassword = newPassword;
     }
 
     public String getNewPassword() {
